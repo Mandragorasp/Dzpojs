@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="russian">
+<meta charset UTF-8 />
+<head>
+<title>ДЗ</title>
+<style>
+body{
+   
+  font-family: cursive;
+  background-color: rgba(126, 84, 255, 0.3);}
+  h1   {color: purple} 
+  h1   {text-align: center;} 
+  h1   {font-size: 250%;}
+  p    {color: FloralWhite;}
+  p    {text-align: center;} 
+  p    {border: 8px solid FloralWhite;}
+  p    {padding: 50px ;}
+  p    {margin: 10px;}
+  p    {font-size: 200%;}
+  p    {background-color: purple;}
+  .inputing {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 20%;
+}
+   .button {
+  border: solid FloralWhite;
+  color: pink;
+  margin: auto;
+  width: 30%;
+  background-color: purple;
+  font-family: cursive;
+  padding: 15px 32px;
+  border-radius: 10%;
+  text-align: center;
+  text-decoration: pink wavy underline;
+  font-size: 18px;
+  cursor: pointer;
+}
+ .dog {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 15%;
+}
+ 
+</style>
+</head>
+<body>
+
+<h1> 👻 Домашнее задание 2 👻 </h1>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<p>Корни квадратного уравнения</p>
+<div class="inputing">
+a <input id="inputA"> </input>
+<br>
+b <input id="inputB"> </input>
+<br>
+c <input id="inputC"> </input>
+</div>
+<br>
+<div class="button" onclick="show_input()">Посчитать корни</button>
+</div> 
+<p id="result"></p>
+<br>
+<div class="dog">
+<img src="https://art.pixilart.com/3c602dfb9f3b6f6.png" style="width:130px;height:142px;">
+</div>
+<script>
+function show_input() {
+  let a = document.getElementById('inputA').value;
+  let b = document.getElementById('inputB').value;
+  let c = document.getElementById('inputC').value;
+    document.getElementById("result").innerText = 'введены числа: ${a},${b},${c}'
+}
+  let discriminant = b * b - 4 * a * c;
+
+if (discriminant > 0) {
+    root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+}
+else if (discriminant == 0) {
+    root1 = root2 = -b / (2 * a);
+}
+else if (discriminant < 0) {
+    root1 = root2 = -b / (2 * a);
+}
+</script>
+</body>
+</body>
+</html>
